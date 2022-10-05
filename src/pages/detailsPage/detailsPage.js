@@ -5,15 +5,19 @@ import "./detailsPage.css"
 const DetailsPage = () => {
 
     const expandServiceList = (e) => {
-        console.log(e.target)
         if (e.target.classList.contains("service-1-heading") && e.target.nextSibling.classList.contains("subServices")) {
             e.target.nextSibling.classList.toggle("hide")
         }
-        // e.target.nextSibling.classList.toggle("hide");
     }
 
     const expandServiceDetails = (e) => {
-        console.log(e.target)
+        //use switch statement
+        if (e.target.classList.contains("subService-1")) {
+            document.querySelector(".service-detials-intro").textContent = "Pardon The fdsafsdafasfdas"
+        }
+        if (e.target.classList.contains("subService-2")) {
+            document.querySelector(".service-detials-intro").textContent = "Not pardon the hahahaafkhjsdtjhkafukl"
+        }
     }
     return (
         <div className='container flex'>
@@ -24,9 +28,9 @@ const DetailsPage = () => {
                 <div className="service-1" onClick={expandServiceList}>
                     <h3 className='service-1-heading'>Design</h3>
                     <div className="subServices-1 subServices">
-                        <div className="subService-1">Prototyping</div>
-                        <div className="subService-2">Animation</div>
-                        <div className="subService-3">Content Creation</div>
+                        <div className="subService-1" onClick={expandServiceDetails}>Prototyping</div>
+                        <div className="subService-2" onClick={expandServiceDetails}>Animation</div>
+                        <div className="subService-3" onClick={expandServiceDetails}>Content Creation</div>
                     </div>
                 </div>
                 {/* ============================================================ */}
