@@ -5,11 +5,16 @@ import "./detailsPage.css"
 const DetailsPage = () => {
 
     const expandServiceList = (e) => {
-        console.log("clicked")
-        console.log(e.target.nextSibling.classList);
-        console.log(e.target.nextSibling.classList.toggle("hide"));
+        console.log(e.target)
+        if (e.target.classList.contains("service-1-heading") && e.target.nextSibling.classList.contains("subServices")) {
+            e.target.nextSibling.classList.toggle("hide")
+        }
+        // e.target.nextSibling.classList.toggle("hide");
     }
 
+    const expandServiceDetails = (e) => {
+        console.log(e.target)
+    }
     return (
         <div className='container flex'>
             {/* service section */}
@@ -18,7 +23,7 @@ const DetailsPage = () => {
                 {/* ============================================= single service */}
                 <div className="service-1" onClick={expandServiceList}>
                     <h3 className='service-1-heading'>Design</h3>
-                    <div className="subServices-1 hide">
+                    <div className="subServices-1 subServices">
                         <div className="subService-1">Prototyping</div>
                         <div className="subService-2">Animation</div>
                         <div className="subService-3">Content Creation</div>
@@ -29,7 +34,7 @@ const DetailsPage = () => {
                 {/* ============================================= single service */}
                 <div className="service-2" onClick={expandServiceList}>
                     <h3 className='service-2-heading'>Design</h3>
-                    <div className="subServices-2">
+                    <div className="subServices-2 subServices">
                         <div className="subService-4">Prototyping</div>
                         <div className="subService-5">Animation</div>
                         <div className="subService-6">Content Creation</div>
