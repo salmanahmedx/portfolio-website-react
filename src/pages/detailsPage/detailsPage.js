@@ -1,4 +1,6 @@
 import React from 'react';
+import "./detailsPage.css"
+
 
 const DetailsPage = () => {
 
@@ -25,7 +27,7 @@ const DetailsPage = () => {
                 {/* ============================================================ */}
 
                 {/* ============================================= single service */}
-                <div className="service-2">
+                <div className="service-2" onClick={expandServiceList}>
                     <h3 className='service-2-heading'>Design</h3>
                     <div className="subServices-2">
                         <div className="subService-4">Prototyping</div>
@@ -35,7 +37,7 @@ const DetailsPage = () => {
                 </div>
                 {/* ============================================================ */}
                 {/* ============================================= single service */}
-                <div className="service-3">
+                <div className="service-3" onClick={expandServiceList}>
                     <h3 className='service-3-heading'>Design</h3>
                     <div className="subServices-3">
                         <div className="subService-7">Prototyping</div>
@@ -45,7 +47,7 @@ const DetailsPage = () => {
                 </div>
                 {/* ============================================================ */}
                 {/* ============================================= single service */}
-                <div className="service-4">
+                <div className="service-4" onClick={expandServiceList}>
                     <h3 className='service-4-heading'>Design</h3>
                     <div className="subServices-4">
                         <div className="subService-10">Prototyping</div>
@@ -56,7 +58,7 @@ const DetailsPage = () => {
                 {/* ============================================================ */}
             </div>
             {/* service details section */}
-            <div className="about basis-3/5">
+            <div className="about basis-3/5" onClick={expandServiceList}>
                 <h1 className='animated-about-heading'>Service Details</h1>
                 <h3 className='service-detials-intro'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quas ad praesentium est cupiditate fugiat repellendus natus. Officiis, velit quo?</h3>
                 <p className='service-details-paragraph'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut pariatur nihil molestias sapiente accusamus unde quia corporis, vitae ipsa magnam placeat suscipit commodi sint ipsam aliquid incidunt aperiam, dignissimos similique iste repellat eaque velit. Corporis.</p>
