@@ -24,10 +24,17 @@ const DetailsPage = () => {
         "details": "lroe kjfksdh kf123lroe kjfksdh kfha dskjfhs kjfah kjah fkjah fkjahf kjafh kjlah fjklah jkahkj hakj hjkla hjkah kjah jksah kjah kjsah kjah kh lkjah fkjahjkfl ahkj hfajkh sjklfah fsjklafhf jksahjk hajk hkjsah kjash kjahskj hfsakjls hfkja hkjlahkjlha dskjfhs kjfah kjah fkjah fkjahf kjafh kjlah lorem2 jdaskjf hjska fskja hfakj hfskajhf kjsahf slkajhf skjlahf sjkahf kjah jkah ljkhakj hkjsah kjash kjahskj hfsakjls hfkja hkjlahkjl"
     }
     ]
-
+    let previousCollapseClass = "subServices";
     const expandServiceList = (e) => {
         if ((e.target.classList.contains("heading-1-text")) && (e.target.parentElement.nextSibling.classList.contains("subServices"))) {
+
+            if (!(document.querySelector(`.${previousCollapseClass}`).classList.contains("hide"))) {
+                (document.querySelector(`.${previousCollapseClass}`).classList.add("hide"))
+            }
+
             e.target.parentElement.nextSibling.classList.toggle("hide");
+            previousCollapseClass = e.target.parentElement.nextSibling.classList[0];
+
         }
     }
 
@@ -55,6 +62,7 @@ const DetailsPage = () => {
             document.querySelector(".service-details").textContent = skillDetails[4].details;
         }
     }
+
     return (
         <div className='container flex'>
             {/* service section */}
@@ -67,7 +75,7 @@ const DetailsPage = () => {
                         <div className='collapse-indicator'></div>
                         <h3 className='heading-1-text font-semibold'>Design</h3>
                     </div>
-                    <div className="subServices-1 subServices ml-4">
+                    <div className="subServices-1 subServices hide ml-4">
                         <div className="subService-1" onClick={expandServiceDetails}>Prototyping</div>
                         <div className="subService-2" onClick={expandServiceDetails}>Animation</div>
                         <div className="subService-3" onClick={expandServiceDetails}>Content Creation</div>
@@ -82,7 +90,7 @@ const DetailsPage = () => {
                         <div className='collapse-indicator'></div>
                         <h3 className='heading-1-text font-semibold'>Design</h3>
                     </div>
-                    <div className="subServices-1 subServices ml-4">
+                    <div className="subServices-2 subServices hide ml-4">
                         <div className="subService-1" onClick={expandServiceDetails}>Prototyping</div>
                         <div className="subService-2" onClick={expandServiceDetails}>Animation</div>
                         <div className="subService-3" onClick={expandServiceDetails}>Content Creation</div>
@@ -91,36 +99,7 @@ const DetailsPage = () => {
                     </div>
                 </div>
                 {/* =========================================================== */}
-                {/* ============================================= single service */}
-                <div className="service-1" onClick={expandServiceList}>
-                    <div className="service-1-heading">
-                        <div className='collapse-indicator'></div>
-                        <h3 className='heading-1-text font-semibold'>Design</h3>
-                    </div>
-                    <div className="subServices-1 subServices ml-4">
-                        <div className="subService-1" onClick={expandServiceDetails}>Prototyping</div>
-                        <div className="subService-2" onClick={expandServiceDetails}>Animation</div>
-                        <div className="subService-3" onClick={expandServiceDetails}>Content Creation</div>
-                        <div className="subService-4" onClick={expandServiceDetails}>Content Creation</div>
-                        <div className="subService-5" onClick={expandServiceDetails}>Content Creation</div>
-                    </div>
-                </div>
-                {/* =========================================================== */}
-                {/* ============================================= single service */}
-                <div className="service-1" onClick={expandServiceList}>
-                    <div className="service-1-heading">
-                        <div className='collapse-indicator'></div>
-                        <h3 className='heading-1-text font-semibold'>Design</h3>
-                    </div>
-                    <div className="subServices-1 subServices ml-4">
-                        <div className="subService-1" onClick={expandServiceDetails}>Prototyping</div>
-                        <div className="subService-2" onClick={expandServiceDetails}>Animation</div>
-                        <div className="subService-3" onClick={expandServiceDetails}>Content Creation</div>
-                        <div className="subService-4" onClick={expandServiceDetails}>Content Creation</div>
-                        <div className="subService-5" onClick={expandServiceDetails}>Content Creation</div>
-                    </div>
-                </div>
-                {/* =========================================================== */}
+
 
 
             </div >
