@@ -99,6 +99,36 @@ const DetailsPage = () => {
                     </div>
                 </div>
                 {/* =========================================================== */}
+                {/* ============================================= single service */}
+                <div className="service-1" onClick={expandServiceList}>
+                    <div className="service-1-heading">
+                        <div className='collapse-indicator'></div>
+                        <h3 className='heading-1-text font-semibold'>Design</h3>
+                    </div>
+                    <div className="subServices-3 subServices hide ml-4">
+                        <div className="subService-1" onClick={expandServiceDetails}>Prototyping</div>
+                        <div className="subService-2" onClick={expandServiceDetails}>Animation</div>
+                        <div className="subService-3" onClick={expandServiceDetails}>Content Creation</div>
+                        <div className="subService-4" onClick={expandServiceDetails}>Content Creation</div>
+                        <div className="subService-5" onClick={expandServiceDetails}>Content Creation</div>
+                    </div>
+                </div>
+                {/* =========================================================== */}
+                {/* ============================================= single service */}
+                <div className="service-1" onClick={expandServiceList}>
+                    <div className="service-1-heading">
+                        <div className='collapse-indicator'></div>
+                        <h3 className='heading-1-text font-semibold'>Design</h3>
+                    </div>
+                    <div className="subServices-4 subServices hide ml-4">
+                        <div className="subService-1" onClick={expandServiceDetails}>Prototyping</div>
+                        <div className="subService-2" onClick={expandServiceDetails}>Animation</div>
+                        <div className="subService-3" onClick={expandServiceDetails}>Content Creation</div>
+                        <div className="subService-4" onClick={expandServiceDetails}>Content Creation</div>
+                        <div className="subService-5" onClick={expandServiceDetails}>Content Creation</div>
+                    </div>
+                </div>
+                {/* =========================================================== */}
 
 
 
