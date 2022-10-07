@@ -128,11 +128,10 @@ const DetailsPage = () => {
             <div div className="about basis-3/5" onClick={expandServiceList} >
                 <h1 className='animated-about-heading text-lg font-bold'>Service Details</h1>
                 <div className="about-container">
-                    <h3 className='service-detials-intro font-semibold mb-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quas ad praesentium est cupiditate fugiat repellendus natus. Officiis, velit quo?</h3>
+                    <h3 className='service-detials-intro font-semibold mb-6 text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quas ad praesentium est cupiditate fugiat repellendus natus. Officiis, velit quo?</h3>
                     <p className='service-details'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut pariatur Corporis.</p>
                 </div>
             </div >
-
         </div >
     );
 };
